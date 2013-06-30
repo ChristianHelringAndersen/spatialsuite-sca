@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    
+	    
+<cbinfo-metadata>
+    <param name="metadata.text">Hentes online (via WMS) fra Datacenter Avedøre Spildevandscenter. Data vises i 1:5000</param>
+    <param name="copyright-text">&#169; Spildevandscenter Avedøre</param>
+    <param name="copyright.url">http://dogl.dk/</param>
+</cbinfo-metadata>
+
+	<clientlayers>
+        <clientlayer>
+            <datasource>wms_dogl_ledninger</datasource>
+            <maxscale>5000</maxscale>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+	
+    <layer name="wms_dogl_ledninger" type="RASTER">
+        [datasource:wms_dogl_ledninger.mapfile-datasource]
+        <maxscale>5000</maxscale>
+    </layer>
+    
+    <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="line">
+        <class>
+            <style>
+                <color>0 0 0</color>
+				<size>10</size>
+            </style>
+            <style>
+                <color>0 250 0</color>
+				<size>7</size>
+			</style>
+            <name>Fællesledning</name>            
+        </class>
+        <class>
+            <style>
+                <color>0 0 0</color>
+				<size>10</size>
+            </style>
+            <style>
+                <color>0 0 250</color>
+				<size>7</size>
+			</style>
+            <name>Regnvandsledning</name>            
+        </class>
+        <class>
+        <style>
+                <color>0 0 0</color>
+				<size>10</size>
+            </style>
+        <style>
+                <color>250 0 0</color>
+				<size>7</size>
+			</style>
+        <name>Spildevandsledning</name>
+        </class>
+        <maxscale>10000</maxscale>	
+    </layer>
+</theme>

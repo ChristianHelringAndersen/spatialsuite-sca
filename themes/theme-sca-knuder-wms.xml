@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    
+    
+<cbinfo-metadata>
+    <param name="metadata.text">Hentes online (via WMS) fra Datacenter Avedøre Spildevandscenter. Data vises i 1:5000</param>
+    <param name="copyright-text">&#169; Spildevandscenter Avedøre</param>
+    <param name="copyright.url">http://dogl.dk/</param>
+</cbinfo-metadata>
+
+	<clientlayers>
+        <clientlayer>
+            <datasource>wms_dogl_knuder</datasource>
+            <maxscale>5000</maxscale>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+	
+    <layer name="wms_dogl_knuder" type="RASTER">
+        [datasource:wms_dogl_knuder.mapfile-datasource]
+        <maxscale>5000</maxscale>
+    </layer>
+    
+    <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="point">
+        <class>
+            <name>Brønd</name>
+			<style>
+                <symbol>broend</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Bassin</name>
+			<style>
+                <symbol>bassin</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Pumpestation</name>
+			<style>
+                <symbol>pumpestation</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Renseanlæg</name>
+			<style>
+                <symbol>renseanlaeg</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Udskiller</name>
+			<style>
+                <symbol>udskiller</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Sandfang</name>
+			<style>
+                <symbol>sandfang</symbol>
+			</style>
+        </class>
+        <class>
+            <name>Overløb</name>
+			<style>
+                <symbol>overloeb</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Udløb</name>
+			<style>
+                <symbol>udloeb</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Reguleringsbygværk</name>
+			<style>
+                <symbol>reguleringsbygvaerk</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Målerbygværk</name>
+			<style>
+                <symbol>maalerbygvaerk</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Fordelerbygværk</name>
+			<style>
+                <symbol>fordelerbygvaerk</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Tryktårn</name>
+			<style>
+                <symbol>tryktaarn</symbol>
+            </style>
+        </class>
+		<class>
+            <name>Tilslutning af stik</name>
+			<style>
+                <symbol>tilslutning_af_stik</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Fiktiv knude (koordinater ukendte)</name>
+			<style>
+                <symbol>tilslutning_af_stik</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Nedsivningsanlæg</name>
+			<style>
+                <symbol>tilslutning_af_stik</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Tank</name>
+			<style>
+                <symbol>tilslutning_af_stik</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Punkt</name>
+			<style>
+                <symbol>tilslutning_af_stik</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Delledningsknude</name>
+			<style>
+                <symbol>tilslutning_af_stik</symbol>
+            </style>
+        </class>
+        <class>
+            <name>Andet</name>
+			<style>
+                <symbol>tilslutning_af_stik</symbol>
+            </style>
+        </class>
+    </layer>
+</theme>

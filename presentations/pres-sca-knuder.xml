@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation xmlns:fo="http://www.w3.org/1999/XSL/Format">
+	<text name="overskrift" value="Kloakbrønd" plural="Kloakbrønde"/>
+<columns>
+	<column format="heading">
+			<condition>isDefined(knudenavn)</condition>
+			<label>knudenavn</label>
+			<value>Knudenavn</value>
+	</column>
+	<column name="1">
+		<condition>isDefined(daekselkote)</condition>
+			<label>'Dækselkote: '</label>
+			<value>DaekselKote</value>
+	</column>
+		<column name="2">
+			<condition>isDefined(bundkote)</condition>
+			<label>'Bundkote: '</label>
+			<value>Bundkote</value>
+		</column>
+		<column name="3">
+			<condition>isDefined(datoetableret)</condition>
+			<label>'Anlægsår :'</label>
+			<value>DatoEtableret</value>
+		</column>
+		<column name="4">
+			<condition>isDefined(typeaflob)</condition>
+			<label>'Brøndtype :'</label>
+			<value>typeaflob</value>
+		</column>		
+		<column format="org-pcolid">
+			<label> if IsDefined(shape_wkt) then GeometryType(shape_wkt) else 
+				"GEOMETRY UNDEFINED" endif </label>
+			<value>pcolid</value>
+		</column>    
+</columns>	
+	
+</presentation>

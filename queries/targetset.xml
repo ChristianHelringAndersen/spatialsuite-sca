@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spatialqueries>
+	
+	<targetset>
+		<target displayname="Kloakbrønde"
+			condition="IsDefined(seek_all_themes) or InList('theme-sca-knuder-wms',layers, ' ')"
+			name="pres-sca-knuder" presentation="[module:sca.dir]/presentations/pres-sca-knuder">
+			<datasource name="wfs_dogl_knuder"/>
+		</target>
+		<target displayname="Kloakledninger"
+			condition="IsDefined(seek_all_themes) or InList('theme-sca-ledninger-wms',layers, ' ')"
+			name="pres-sca-ledninger" presentation="[module:sca.dir]/presentations/pres-sca-ledninger">
+			<datasource name="wfs_dogl_ledninger"/>
+		</target>
+	</targetset>
+</spatialqueries>

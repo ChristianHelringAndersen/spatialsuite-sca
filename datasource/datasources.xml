@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<datasources>
+
+    <!-- ========================================================= -->
+    <!--  Endpoints                                                -->
+    <!-- ========================================================= -->
+
+    <!-- http://drift.kortinfo.net/wms.aspx?Site=SCA-Niras&page=wms -->
+    <endpoint name="wms_dogl" endpointtype="wms">
+        <service>http://drift.kortinfo.net/wms.aspx</service>
+        <parameters>
+            <servicename>WMS</servicename>
+            <site>SCA-Niras</site>
+            <page>wms</page>
+			<srs>EPSG:25832</srs>
+			<boundingbox>
+			<minx>714820</minx>
+			<miny>6174106</miny>
+			<maxx>719002</maxx>
+			<maxy>6179794</maxy>
+			</boundingbox>
+        </parameters>
+    </endpoint>
+    
+      
+    
+    <!-- http://drift.kortinfo.net/wfs.aspx?Site=SCA-Niras&page=wfs -->
+    <endpoint name="wfs_dogl" endpointtype="wfs">
+        <service>http://drift.kortinfo.net/wfs.aspx</service>
+        <parameters>
+            <servicename>WFS</servicename>
+            <site>SCA-Niras</site>
+            <page>wfs</page>
+            <srs>EPSG:25832</srs>
+			<boundingbox>
+			<minx>714820</minx>
+			<miny>6174106</miny>
+			<maxx>719002</maxx>
+			<maxy>6179794</maxy>
+			</boundingbox>
+        </parameters>        
+    </endpoint>
+    
+
+    <!-- ========================================================= -->
+    <!--  Datasources                                              -->
+    <!-- ========================================================= -->
+
+
+    <!-- WMS Ledninger - kloak DogL spildevandscenter WMS -->     
+    <datasource name="wms_dogl_ledninger" endpoint="wms_dogl"> 
+        <wms>
+            <layers>104567</layers>
+            <format>image/png</format> 
+            <transparent>true</transparent>
+        </wms> 
+    </datasource> 
+    
+    <!-- WMS Knuder -  kloak DogL  spildevandscenter wms -->     
+    <datasource name="wms_dogl_knuder" endpoint="wms_dogl"> 
+        <wms>
+            <layers>104568</layers>
+            <format>image/png</format> 
+            <transparent>true</transparent>
+        </wms>
+    </datasource>  
+
+    <!-- WFS Ledninger - kloak DogL spildevandscenter WFS -->     
+    <datasource name="wfs_dogl_ledninger" endpoint="wfs_dogl"> 
+        <wfs geometrycolumn="GEOMETRI">
+            <typename>ugis:T104570</typename>
+        </wfs> 
+    </datasource> 
+    
+    <!-- WFS Knuder -  kloak DogL  spildevandscenter -->     
+    <datasource name="wfs_dogl_knuder" endpoint="wfs_dogl"> 
+        <wfs geometrycolumn="GEOMETRI">
+            <typename>ugis:T104571</typename>
+        </wfs>
+    </datasource> 
+
+
+ </datasources>

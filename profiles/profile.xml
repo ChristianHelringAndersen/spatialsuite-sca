@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<profile>
+      
+    <themegroups>
+        <themegroup displayname="Spildevandscenter Avedøre" expanded="false" name="sca" type="checkbutton"/>
+    </themegroups>
+    
+    <themes>    
+        <theme module="sca" name="theme-sca-knuder-wms">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>sca</group>
+                <displayname>Kloakbrønde</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+            <downloadable>false</downloadable>
+        </theme>
+        <theme module="sca" name="theme-sca-ledninger-wms">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>sca</group>
+                <displayname>Kloakledninger</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+            <downloadable>false</downloadable>
+        </theme>
+    </themes>
+</profile>
